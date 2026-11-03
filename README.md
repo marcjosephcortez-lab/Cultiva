@@ -1,4 +1,5 @@
 <img width="1408" height="768" alt="Gemini_Generated_Image_f9ko87f9ko87f9ko" src="https://github.com/user-attachments/assets/fa8fb99c-a0b6-4f60-b129-8ac64e891834" />
+
 # Cultiva
 
 **A Python-based Farm and Garden Management System**
