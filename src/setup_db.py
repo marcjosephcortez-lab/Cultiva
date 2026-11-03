@@ -150,13 +150,7 @@ def ensure_mode_separation():
                 "ON DUPLICATE KEY UPDATE setting_value=VALUES(setting_value)",
                 (backfill_marker, "complete"),
             )
-            # Land the user in Farm after the one-time backfill so their
-            # pre-existing records remain immediately visible on first launch.
-            db.execute(
-                "INSERT INTO settings (setting_key, setting_value) VALUES (%s, %s) "
-                "ON DUPLICATE KEY UPDATE setting_value=VALUES(setting_value)",
-                ("mode", "farm"),
-            )
+
 
         # Add composite uniqueness and foreign keys so a record cannot point
         # to a parent that belongs to the other mode.
